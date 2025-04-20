@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Payroll Calendar</h1>
+        
+        <div class="department-selector">
+            <label for="department">Select Department:</label>
+            <select id="department">
+                <option value="production">Production (7:00 AM - 4:00 PM)</option>
+                <option value="office">Office/Other (8:00 AM - 5:00 PM)</option>
+            </select>
+        </div>
+
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <button id="prevMonth">&lt;</button>
+                <h2 id="monthYear"></h2>
+                <button id="nextMonth">&gt;</button>
+            </div>
+            <div class="weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div id="calendar" class="calendar-grid"></div>
+        </div>
+
+        <div class="cutoff-info">
+            <h3>Cut-off Information</h3>
+            <p>First Cut-off: 1st - 15th (Payday: 15th)</p>
+            <p>Second Cut-off: 16th - 30th/31st (Payday: 30th)</p>
+            <p>Note: 13 working days per cut-off (excluding weekends)</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
