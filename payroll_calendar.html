@@ -234,7 +234,8 @@
 
                 dayElement.innerHTML = `${day}<br>`;
 
-                if (![0, 6].includes(new Date(currentDateString).getDay())) {
+                const dayOfWeek = new Date(currentDateString).getDay();
+                if (dayOfWeek >= 1 && dayOfWeek <= 6) { // Monday (1) to Saturday (6)
                     dayElement.innerHTML += `
                         <div class="schedule">
                             Production: 7AM-4PM<br>
